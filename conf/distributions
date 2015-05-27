@@ -1,0 +1,8 @@
+Origin: Jean-Baptiste Quenot
+Label: Tech Coach
+Suite: stable
+Codename: trusty
+Version: 1.0
+Architectures: amd64 i386
+Components: main
+Description: Tech Coach Debian packages

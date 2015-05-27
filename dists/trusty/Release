@@ -1,0 +1,30 @@
+Origin: Jean-Baptiste Quenot
+Label: Tech Coach
+Suite: stable
+Codename: trusty
+Version: 1.0
+Date: Wed, 27 May 2015 12:28:16 UTC
+Architectures: amd64 i386
+Components: main
+Description: Tech Coach Debian packages
+MD5Sum:
+ f448f74af5c7ce84a3355645caf6e9ba 740 main/binary-amd64/Packages
+ 2f520ef802165ed3e5e2707b200649b2 483 main/binary-amd64/Packages.gz
+ 48d0a1d604e35c76607967b2ea7c141d 152 main/binary-amd64/Release
+ f448f74af5c7ce84a3355645caf6e9ba 740 main/binary-i386/Packages
+ 2f520ef802165ed3e5e2707b200649b2 483 main/binary-i386/Packages.gz
+ b86fd8787d0c70835a2b3e4cfbef27a4 151 main/binary-i386/Release
+SHA1:
+ d6ff5611838a03bff6fc2e0a1cb2e09830c874e9 740 main/binary-amd64/Packages
+ 53589eaed5519d28c95e96e191d6d830f9926f1d 483 main/binary-amd64/Packages.gz
+ 2ca7939016f74b893fcc0270508169fef0f500f9 152 main/binary-amd64/Release
+ d6ff5611838a03bff6fc2e0a1cb2e09830c874e9 740 main/binary-i386/Packages
+ 53589eaed5519d28c95e96e191d6d830f9926f1d 483 main/binary-i386/Packages.gz
+ 86db8fc68e97fe090b7ecb3d15a4b67981f9dd0e 151 main/binary-i386/Release
+SHA256:
+ 9f65e5e7b14b9fe9e6d03f6586ce6877b949d4655f434d01763f5048818539b7 740 main/binary-amd64/Packages
+ bbe7fd4bed28d0b9a197d6ce8b6e301ed5ceec78dda29e46df693eecee6fe403 483 main/binary-amd64/Packages.gz
+ e66f780d21c88dee1d3ec32bde4c1872f3c4ca92902a3ffc77064b3c6f372314 152 main/binary-amd64/Release
+ 9f65e5e7b14b9fe9e6d03f6586ce6877b949d4655f434d01763f5048818539b7 740 main/binary-i386/Packages
+ bbe7fd4bed28d0b9a197d6ce8b6e301ed5ceec78dda29e46df693eecee6fe403 483 main/binary-i386/Packages.gz
+ cba8722c020d42b484c4da239c075e2bcb493428db112e078b0391f89c685612 151 main/binary-i386/Release

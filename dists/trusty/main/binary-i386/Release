@@ -1,0 +1,7 @@
+Archive: stable
+Version: 1.0
+Component: main
+Origin: Jean-Baptiste Quenot
+Label: Tech Coach
+Architecture: i386
+Description: Tech Coach Debian packages
