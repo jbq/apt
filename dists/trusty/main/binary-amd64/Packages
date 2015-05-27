@@ -1,3 +1,62 @@
+Package: libodbc1
+Source: unixodbc
+Version: 2.3.1-3
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Installed-Size: 597
+Pre-Depends: multiarch-support
+Depends: libc6 (>= 2.14), libltdl7 (>= 2.4.2)
+Suggests: libmyodbc, odbc-postgresql, tdsodbc, unixodbc-bin
+Breaks: unixodbc (<< 2.2.14p2-3)
+Replaces: unixodbc (<< 2.2.14p2-3)
+Multi-Arch: same
+Homepage: http://www.unixodbc.org/
+Priority: optional
+Section: libs
+Filename: pool/main/u/unixodbc/libodbc1_2.3.1-3_amd64.deb
+Size: 176424
+SHA256: 18a191bccef56cb0cae562c90b518d941b371ce115d85669de6fbb82fd9692d9
+SHA1: 35c9f2ab037a192c91167961b86c075427332723
+MD5sum: 08b3e470c6706aacda37f2e997e94845
+Description: ODBC library for Unix
+ UnixODBC is an implementation of the Open DataBase Connectivity standard,
+ a database abstraction layer that allows applications to be used with
+ many different relational databases by way of a single library.
+ .
+ This package provides the UnixODBC shared library, libodbc; and
+ libodbctxt.so, a sample driver that reads from and writes to flat text
+ files.
+
+Package: odbcinst1debian2
+Source: unixodbc
+Version: 2.3.1-3
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Installed-Size: 241
+Pre-Depends: multiarch-support
+Depends: libc6 (>= 2.14), libltdl7 (>= 2.4.2), odbcinst
+Conflicts: odbcinst1, odbcinst1debian1
+Breaks: libmyodbc (<< 5.1.6-2), odbc-postgresql (<< 1:09.00.0310-1.1), tdsodbc (<< 0.82-8)
+Replaces: unixodbc (<< 2.1.1-2)
+Multi-Arch: same
+Homepage: http://www.unixodbc.org/
+Priority: optional
+Section: libs
+Filename: pool/main/u/unixodbc/odbcinst1debian2_2.3.1-3_amd64.deb
+Size: 40594
+SHA256: 9b2a9a4ce60bdcfdefc20198c5f9ea63aaec116ab55fe4845e2339067c07a163
+SHA1: 89709e1fe805b9689997ca52db0f4cdabcc95089
+MD5sum: 67d2a4e3eae00e8fe85ce445c03730e1
+Description: Support library for accessing odbc ini files
+ This package contains the libodbcinst library from unixodbc, a library
+ used by ODBC drivers for reading their configuration settings from
+ /etc/odbc.ini and ~/.odbc.ini.
+ .
+ Also contained in this package are the driver setup plugins, which
+ describe the features supported by individual ODBC drivers.
+
 Package: python-openpyxl
 Source: openpyxl
 Version: 2.2.2-1caraldi1
@@ -17,4 +76,53 @@ MD5sum: d663e1beb3ff97dade12cbf9badd5bcf
 Description: module to read/write OpenXML xlsx/xlsm files
  Openpyxl is a pure Python module to read/write Excel 2007 (OpenXML)
  xlsx/xlsm files.
+
+Package: unixodbc
+Version: 2.3.1-3
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Installed-Size: 114
+Depends: libc6 (>= 2.14), libodbc1 (>= 2.3.1), libreadline6 (>= 6.0), odbcinst1debian2 (>= 2.3.1)
+Conflicts: unixodbc-bin (<< 2.2.4-1)
+Multi-Arch: foreign
+Homepage: http://www.unixodbc.org/
+Priority: optional
+Section: database
+Filename: pool/main/u/unixodbc/unixodbc_2.3.1-3_amd64.deb
+Size: 19954
+SHA256: 392edba218abe339539ac407c836b211d10769e563a0516d663a89b10ac032df
+SHA1: e2b1729f3fc2f1fe134c7820ad19d78540afca5b
+MD5sum: 0b17049d8772dd05aa3ec7620b217981
+Description: Basic ODBC tools
+ UnixODBC is an implementation of the Open Database Connectivity standard,
+ a database abstraction layer that allows applications to be used with
+ many different relational databases by way of a single library.
+ .
+ This package contains isql, a command-line tool that allows SQL commands
+ to be entered interactively.
+
+Package: unixodbc-dev
+Source: unixodbc
+Version: 2.3.1-3
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Installed-Size: 1710
+Depends: unixodbc (= 2.3.1-3), odbcinst1debian2 (= 2.3.1-3), libltdl3-dev
+Conflicts: libiodbc2-dev, remembrance-agent (<< 2.11-4)
+Homepage: http://www.unixodbc.org/
+Priority: extra
+Section: devel
+Filename: pool/main/u/unixodbc/unixodbc-dev_2.3.1-3_amd64.deb
+Size: 212890
+SHA256: bbac168f57ab354865391a4e49dc0d2a3aac6aef7bd5d84a50c6e6d72854f9d1
+SHA1: ca0f75cd255c3740c80b398d203ed05c2dc7d812
+MD5sum: a3ec5d93443c8622a217f5c1711b223c
+Description: ODBC libraries for UNIX (development files)
+ This package contains the development files (headers and libraries) for
+ unixODBC, an implementation of the Open DataBase Connectivity interface
+ for Unix systems.  You should not need to install this package unless
+ you intend to develop C language applications which use ODBC, or to
+ compile ODBC-using applications from source.
 

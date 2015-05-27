@@ -3,27 +3,27 @@ Label: Tech Coach
 Suite: stable
 Codename: trusty
 Version: 1.0
-Date: Wed, 27 May 2015 12:28:16 UTC
+Date: Wed, 27 May 2015 12:41:50 UTC
 Architectures: amd64 i386
 Components: main
 Description: Tech Coach Debian packages
 MD5Sum:
- f448f74af5c7ce84a3355645caf6e9ba 740 main/binary-amd64/Packages
- 2f520ef802165ed3e5e2707b200649b2 483 main/binary-amd64/Packages.gz
+ b6ca7e4603be519af89f2c986846f0fb 5090 main/binary-amd64/Packages
+ 06f236f4cc1e0cbc53a1d1b6f7ddfc0d 1957 main/binary-amd64/Packages.gz
  48d0a1d604e35c76607967b2ea7c141d 152 main/binary-amd64/Release
  f448f74af5c7ce84a3355645caf6e9ba 740 main/binary-i386/Packages
  2f520ef802165ed3e5e2707b200649b2 483 main/binary-i386/Packages.gz
  b86fd8787d0c70835a2b3e4cfbef27a4 151 main/binary-i386/Release
 SHA1:
- d6ff5611838a03bff6fc2e0a1cb2e09830c874e9 740 main/binary-amd64/Packages
- 53589eaed5519d28c95e96e191d6d830f9926f1d 483 main/binary-amd64/Packages.gz
+ 126586c46f4560d926cbc4ab83e82a06f6cd12b2 5090 main/binary-amd64/Packages
+ 5d87a7d642d6b4b3e0bbd01d6305482d49caaf4c 1957 main/binary-amd64/Packages.gz
  2ca7939016f74b893fcc0270508169fef0f500f9 152 main/binary-amd64/Release
  d6ff5611838a03bff6fc2e0a1cb2e09830c874e9 740 main/binary-i386/Packages
  53589eaed5519d28c95e96e191d6d830f9926f1d 483 main/binary-i386/Packages.gz
  86db8fc68e97fe090b7ecb3d15a4b67981f9dd0e 151 main/binary-i386/Release
 SHA256:
- 9f65e5e7b14b9fe9e6d03f6586ce6877b949d4655f434d01763f5048818539b7 740 main/binary-amd64/Packages
- bbe7fd4bed28d0b9a197d6ce8b6e301ed5ceec78dda29e46df693eecee6fe403 483 main/binary-amd64/Packages.gz
+ 1c2f68006a5b5505a1439ef10b4f1d223213d9d686faf21f418b5bf9974bec76 5090 main/binary-amd64/Packages
+ cfe715eb88520b438d93a8a9acfcbc08f9aa00c0c5b2924b5e8488f68c98ca9b 1957 main/binary-amd64/Packages.gz
  e66f780d21c88dee1d3ec32bde4c1872f3c4ca92902a3ffc77064b3c6f372314 152 main/binary-amd64/Release
  9f65e5e7b14b9fe9e6d03f6586ce6877b949d4655f434d01763f5048818539b7 740 main/binary-i386/Packages
  bbe7fd4bed28d0b9a197d6ce8b6e301ed5ceec78dda29e46df693eecee6fe403 483 main/binary-i386/Packages.gz
