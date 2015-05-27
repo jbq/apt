@@ -92,6 +92,55 @@ Description: module to read/write OpenXML xlsx/xlsm files
  Openpyxl is a pure Python module to read/write Excel 2007 (OpenXML)
  xlsx/xlsm files.
 
+Package: python-uwsgidecorators
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: all
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 62
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), uwsgi-core, uwsgi-plugin-python
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: python
+Filename: pool/main/u/uwsgi/python-uwsgidecorators_1.9.17.1-5ubuntu1_all.deb
+Size: 18448
+SHA256: 5fa76e950c7a4c02829abdf57b143aa3a4102cf14f6d5c64ad7761d52184f3c9
+SHA1: 32762359d4309b0b9da8bf25e765e4d84071fdda
+MD5sum: bbe2f42c905d1485ebf0a744e28fd88b
+Description: module of decorators for elegant access to uWSGI API (Python)
+ uwsgidecorators is a simple Python module that exports a bunch of decorators
+ to allow a more elegant approach to uWSGI API. Provided decorators helps with
+ creating of RPC functions, timers, filemonitors.
+ .
+ This package provides uwsgidecorators module, accessible from Python 2.X
+ runtime.
+
+Package: python3-uwsgidecorators
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: all
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 62
+Depends: python3:any (>= 3.3.2-2~), uwsgi-core, uwsgi-plugin-python3
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: python
+Filename: pool/main/u/uwsgi/python3-uwsgidecorators_1.9.17.1-5ubuntu1_all.deb
+Size: 18584
+SHA256: ba905ac2bf9415b0a569be9d954b82d1977c882dd1d1aa8f8bc1478a8841c6fc
+SHA1: 81adfdfa1cac3522efbc1e849448548633d92841
+MD5sum: 4e6aa3a4b42cef15cb51a5c9024ebf35
+Description: module of decorators for elegant access to uWSGI API (Python 3)
+ uwsgidecorators is a simple Python module that exports a bunch of decorators
+ to allow a more elegant approach to uWSGI API. Provided decorators helps with
+ creating of RPC functions, timers, filemonitors.
+ .
+ This package provides uwsgidecorators module, accessible from Python 3.X
+ runtime.
+ .
+ uwsgidecorators module doesn't targeted at Python 3 officially, so some
+ decorators may not work or work improperly.
+
 Package: unixodbc
 Version: 2.3.1-3
 Architecture: amd64
@@ -140,4 +189,743 @@ Description: ODBC libraries for UNIX (development files)
  for Unix systems.  You should not need to install this package unless
  you intend to develop C language applications which use ODBC, or to
  compile ODBC-using applications from source.
+
+Package: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 128
+Depends: uwsgi-core (= 1.9.17.1-5ubuntu1), lsb-base, initscripts (>= 2.88dsf-13.3)
+Recommends: sqlite3
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: optional
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi_1.9.17.1-5ubuntu1_amd64.deb
+Size: 28594
+SHA256: 65fd1c5eb89efd403c8aece5cb8a890e569e54944482ea544db67a3a5c1496ab
+SHA1: 5559e6cb1299bb464137c221c98193430f35ee3b
+MD5sum: d9d0eb151c97c5dad4ac4f3594dff187
+Description: fast, self-healing application container server
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It uses the uwsgi protocol for all the networking/interprocess communications.
+ .
+ uWSGI can be run in preforking, threaded, asynchronous/evented modes and
+ supports various forms of green threads/coroutines (such as uGreen, Greenlet,
+ Fiber). uWSGI provides several methods of configuration: via command line,
+ via environment variables, via XML, INI, YAML configuration files, via LDAP
+ and more.
+ .
+ On top of all this, it is designed to be fully modular. This means that
+ different plugins can be used in order to add compatibility with tons of
+ different technology on top of the same core.
+ .
+ This package depends on uWSGI core binary and installs:
+   * init.d script for running uWSGI daemon(s) with options defined in custom
+     user-created configuration files
+   * infrastructure for running daemons (like common locations of communication
+     sockets, logs)
+
+Package: uwsgi-app-integration-plugins
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 40
+Depends: uwsgi-plugin-php (= 1.9.17.1-5ubuntu1), uwsgi-plugin-psgi (= 1.9.17.1-5ubuntu1), uwsgi-plugin-python (= 1.9.17.1-5ubuntu1), uwsgi-plugin-python3 (= 1.9.17.1-5ubuntu1), uwsgi-plugin-rack-ruby1.9.1 (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-app-integration-plugins_1.9.17.1-5ubuntu1_amd64.deb
+Size: 16372
+SHA256: 444da35222b524c09ebaf501a25769ce4357558752629bd91144119351caf57d
+SHA1: 6fb8df599e7f9dbbd6686f8cc87fdb012627e846
+MD5sum: a05d342367dd591004fafc607ef2a5e6
+Description: plugins for integration of uWSGI and application
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This dependency package provides plugins for integration of uWSGI and
+ application:
+   * Erlang
+   * Java (OpenJDK 6 and 7)
+   * JWSGI (OpenJDK 6 and 7)
+   * Lua WSAPI (Lua 5.1 and 5.2)
+   * PHP
+   * Perl PSGI
+   * Python WSGI (Python/Python 3)
+   * Rack (Ruby 1.9.1)
+   * V8
+
+Package: uwsgi-core
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 1383
+Depends: libc6 (>= 2.14), libcap2 (>= 2.10), libjansson4 (>= 2.0.1), libpam0g (>= 0.99.7.1), libpcre3, libuuid1 (>= 2.16), libxml2 (>= 2.7.4), libyaml-0-2, libzmq3 (>= 3.2.3+dfsg), zlib1g (>= 1:1.2.0)
+Suggests: nginx-full | cherokee | libapache2-mod-proxy-uwsgi | libapache2-mod-uwsgi | libapache2-mod-ruwsgi, uwsgi-plugins-all, uwsgi-extra
+Conflicts: uwsgi-plugin-cache, uwsgi-plugin-carbon, uwsgi-plugin-cgi, uwsgi-plugin-echo, uwsgi-plugin-emperor-zeromq, uwsgi-plugin-fastrouter, uwsgi-plugin-http, uwsgi-plugin-logsocket, uwsgi-plugin-nagios, uwsgi-plugin-ping, uwsgi-plugin-router-static, uwsgi-plugin-rpc, uwsgi-plugin-rrdtool, uwsgi-plugin-rsyslog, uwsgi-plugin-signal, uwsgi-plugin-symcall, uwsgi-plugin-syslog, uwsgi-plugin-ugreen, wsgi-plugin-admin
+Replaces: uwsgi-plugin-cache, uwsgi-plugin-carbon, uwsgi-plugin-cgi, uwsgi-plugin-echo, uwsgi-plugin-emperor-zeromq, uwsgi-plugin-fastrouter, uwsgi-plugin-http, uwsgi-plugin-logsocket, uwsgi-plugin-nagios, uwsgi-plugin-ping, uwsgi-plugin-router-static, uwsgi-plugin-rpc, uwsgi-plugin-rrdtool, uwsgi-plugin-rsyslog, uwsgi-plugin-signal, uwsgi-plugin-symcall, uwsgi-plugin-syslog, uwsgi-plugin-ugreen, wsgi-plugin-admin
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: optional
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-core_1.9.17.1-5ubuntu1_amd64.deb
+Size: 390832
+SHA256: 69759e8f52a65dcadc7a393b53bf9a3bafe48687af740bc3a36b70f16bbf044c
+SHA1: 9be1798612655a60e206df8bf67abd71c3547092
+MD5sum: c9938af2d43c8ce6626b44e0d4409f88
+Description: fast, self-healing application container server (core)
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It uses the uwsgi protocol for all the networking/interprocess communications.
+ .
+ uWSGI can be run in preforking, threaded, asynchronous/evented modes and
+ supports various forms of green threads/coroutines (such as uGreen, Greenlet,
+ Fiber). uWSGI provides several methods of configuration: via command line,
+ via environment variables, via XML, INI, YAML configuration files, via LDAP
+ and more.
+ .
+ On top of all this, it is designed to be fully modular. This means that
+ different plugins can be used in order to add compatibility with tons of
+ different technology on top of the same core.
+ .
+ This package provides:
+   * executable uWSGI core binary (built without any embedded plugins)
+   * uWSGI usage examples
+   * uWSGI test suite
+   * plugins that do not require additional dependencies:
+    - admin
+    - alarm_speech
+    - cache
+    - carbon
+    - cgi
+    - cheaper_backlog2
+    - cheaper_busyness
+    - clock_monothonic
+    - clock_realtime
+    - corerouter
+    - coroae
+    - echo
+    - emperor_amqp
+    - emperor_zeromq (on supported architectures)
+    - fastrouter
+    - http
+    - logfile
+    - logfile
+    - logsocket
+    - nagios
+    - notfound
+    - pam
+    - ping
+    - rawrouter
+    - redislog
+    - router_basicauth
+    - router_cache
+    - router_http
+    - router_memcached
+    - router_redirect
+    - router_rewrite
+    - router_static
+    - router_uwsgi
+    - rpc
+    - rrdtool
+    - rsyslog
+    - signal
+    - spooler
+    - ssi
+    - sslrouter
+    - stats_pusher_statsd
+    - symcall
+    - syslog
+    - transformation_gzip
+    - transformation_tofile
+    - transformation_toupper
+    - ugreen
+    - zergpool
+
+Package: uwsgi-dbg
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 7940
+Depends: uwsgi-core (= 1.9.17.1-5ubuntu1)
+Suggests: uwsgi-plugins-all
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: debug
+Filename: pool/main/u/uwsgi/uwsgi-dbg_1.9.17.1-5ubuntu1_amd64.deb
+Size: 1338702
+SHA256: c860e8ce195d738cb7a9c43dede21b662e09760d7564af1bd41d6f27bbca5821
+SHA1: 8b3144a886fd243c2e037954774ea78ac99e6890
+MD5sum: 55c6d842ab3a9fcb5f7b786b88f9db3b
+Description: debugging symbols for uWSGI server and it's plugins
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ .
+ This package contains the debug symbols for uWSGI core binary and plugins.
+ Install this package if you need to debug such a program or if you need a
+ useful backtrace of a crash.
+
+Package: uwsgi-emperor
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 81
+Depends: uwsgi-core (= 1.9.17.1-5ubuntu1), lsb-base, initscripts (>= 2.88dsf-13.3)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: optional
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-emperor_1.9.17.1-5ubuntu1_amd64.deb
+Size: 18886
+SHA256: 48908196a712cf2dc7fef6368a599f8804b4a694314e7451b934811a5971a70e
+SHA1: 7c567c25d6f0398b174042d1d8f37d4d37c51341
+MD5sum: 2969d7c8543797288cdad4af8f415527
+Description: fast, self-healing application container server (emperor scripts)
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It uses the uwsgi protocol for all the networking/interprocess communications.
+ .
+ uWSGI can be run in preforking, threaded, asynchronous/evented modes and
+ supports various forms of green threads/coroutines (such as uGreen, Greenlet,
+ Fiber). uWSGI provides several methods of configuration: via command line,
+ via environment variables, via XML, INI, YAML configuration files, via LDAP
+ and more.
+ .
+ On top of all this, it is designed to be fully modular. This means that
+ different plugins can be used in order to add compatibility with tons of
+ different technology on top of the same core.
+ .
+ This package depends on uWSGI core binary and installs:
+   * init.d script for running uWSGI Emperor daemon with options defined in
+     custom user-created configuration files
+   * basic configuration for running uWSGI Emperor daemon
+
+Package: uwsgi-extra
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: all
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 119
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-extra_1.9.17.1-5ubuntu1_all.deb
+Size: 35716
+SHA256: ed9e80be034c37a7c8413a4086221985208f65741750c9ad85d36acb90a7f127
+SHA1: fe76970a8f8715e4970460e7f9b25e4b400491d1
+MD5sum: 6d6012a16f5de81e76c62e494a8503f1
+Description: fast, self-healing application container server (extra files)
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ .
+ This package provides extra files from uWSGI distribution.
+
+Package: uwsgi-infrastructure-plugins
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 40
+Depends: uwsgi-plugin-alarm-curl (= 1.9.17.1-5ubuntu1), uwsgi-plugin-alarm-xmpp (= 1.9.17.1-5ubuntu1), uwsgi-plugin-curl-cron (= 1.9.17.1-5ubuntu1), uwsgi-plugin-emperor-pg (= 1.9.17.1-5ubuntu1), uwsgi-plugin-graylog2 (= 1.9.17.1-5ubuntu1), uwsgi-plugin-geoip (= 1.9.17.1-5ubuntu1), uwsgi-plugin-ldap (= 1.9.17.1-5ubuntu1), uwsgi-plugin-router-access (= 1.9.17.1-5ubuntu1), uwsgi-plugin-sqlite3 (= 1.9.17.1-5ubuntu1), uwsgi-plugin-xslt (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-infrastructure-plugins_1.9.17.1-5ubuntu1_amd64.deb
+Size: 16386
+SHA256: 9d3d0cc3479ab6e27354ab10763643e4d8062dc1db3762c83954cdfadb562103
+SHA1: d164ab2131521a5ebbc0bd9ac24ddb9322deb4b6
+MD5sum: 8cacb474f19ba6c39dbd3ca3dbcfda23
+Description: infrastructure plugins for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This dependency package provides infrastructure plugins for uWSGI:
+   * alarm curl
+   * alarm XMPP
+   * curl cron
+   * PostgreSQL emperor
+   * graylog2
+   * GeoIP
+   * LDAP
+   * router access
+   * sqlite3
+   * XSLT request
+
+Package: uwsgi-plugin-alarm-curl
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 87
+Depends: libc6 (>= 2.14), libcurl3 (>= 7.16.2), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-alarm-curl_1.9.17.1-5ubuntu1_amd64.deb
+Size: 30892
+SHA256: d983de3da0303213158720d658b48f185e937fa9661abc8bb72e6c767ebcf631
+SHA1: 28207712db191c641093d12c55531625094f1679
+MD5sum: 3ef7760717102ed3586f5385da4be54f
+Description: Alarm curl plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides alarm_curl plugin for uWSGI.
+
+Package: uwsgi-plugin-alarm-xmpp
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 95
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libgloox11, uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-alarm-xmpp_1.9.17.1-5ubuntu1_amd64.deb
+Size: 32652
+SHA256: 94e893e59c55ac37a2e47101b80d399c6bee130e21dcbb513a4a2ef413065fa8
+SHA1: 1e3fe180f0827115fa1fdcc6152bef39bf1260fa
+MD5sum: 3fe53069a23eb20263723470c6db5fb4
+Description: Alarm XMPP plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides alarm_xmpp plugin for uWSGI.
+
+Package: uwsgi-plugin-curl-cron
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 83
+Depends: libc6 (>= 2.2.5), libcurl3 (>= 7.16.2), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-curl-cron_1.9.17.1-5ubuntu1_amd64.deb
+Size: 29538
+SHA256: ea49bbfd75bcee550bcda72b23784932625d62b2996333febeb0da7574689dad
+SHA1: f0940fc3f6e7660f792a1e361230318a10932449
+MD5sum: ebf8efb3bfa24a776cee2684e509d7b6
+Description: curl cron plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides curl_cron plugin for uWSGI.
+
+Package: uwsgi-plugin-emperor-pg
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 87
+Depends: libc6 (>= 2.2.5), libpq5, uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-emperor-pg_1.9.17.1-5ubuntu1_amd64.deb
+Size: 30226
+SHA256: f456f96b1fbf5e52cf1a7f564bcefdfcb5c3fb0fca97e8f86e0c1bba270544f0
+SHA1: c44bcf8a7820421f0a8bdfb8a5fe12418eeb61ff
+MD5sum: 6c9bd444c384b15b98e265da5f45ae39
+Description: Emperor PostgreSQL plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides emperor_pg plugin for uWSGI.
+
+Package: uwsgi-plugin-fiber
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 62
+Depends: libc6 (>= 2.2.5), uwsgi-core (= 1.9.17.1-5ubuntu1), uwsgi-plugin-rack-ruby1.9.1 (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-fiber_1.9.17.1-5ubuntu1_amd64.deb
+Size: 18714
+SHA256: a70cec3c545784b3ec55cc5bb2e426842bd93973e179efe12713441023f7149a
+SHA1: 863a213de03297b6c17648cacad742362d967abd
+MD5sum: f671494f32cb39ce44777b11b56cf2c4
+Description: fiber loop engine plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides Ruby 1.9 fiber loop engine plugin for uWSGI. Fibers are
+ a form of coroutine, useful for implementing cooperative multitasking in your
+ Ruby 1.9.x apps.
+
+Package: uwsgi-plugin-geoip
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 87
+Depends: libc6 (>= 2.4), libgeoip1, uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-geoip_1.9.17.1-5ubuntu1_amd64.deb
+Size: 30356
+SHA256: 3a14cf0ed930513a182c851530adb2318cbbaf701db4c33f9aca60c463cfb22f
+SHA1: db889792915ff3342a4116c27c7d58762fcf8104
+MD5sum: 35ab04fd0406fc9976282a4f3e079980
+Description: GeoIP plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides geoip plugin for uWSGI.
+
+Package: uwsgi-plugin-graylog2
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 87
+Depends: libc6 (>= 2.3.4), zlib1g (>= 1:1.2.0), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-graylog2_1.9.17.1-5ubuntu1_amd64.deb
+Size: 30230
+SHA256: 4a8a8e19d7f7d2ff970248f583bfd828cd0f891d67ac798c820c0313ea63bd5c
+SHA1: a05dcff37754eef8b6d78ac94d7058af947996bb
+MD5sum: ef9c71a77b2ef56a9f30b6f114fc708f
+Description: graylog2 plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides graylog2 plugin for uWSGI.
+
+Package: uwsgi-plugin-greenlet-python
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 75
+Depends: libc6 (>= 2.2.5), python-greenlet, uwsgi-plugin-python (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-greenlet-python_1.9.17.1-5ubuntu1_amd64.deb
+Size: 20176
+SHA256: d66eb8ec82f543f554ee2560baf2a82e7895dac6172f1bb10602281fa29d934b
+SHA1: bb7d623533d6a5f920b856a0592ac25cc431e688
+MD5sum: d025e80bc8fa6355eea186aec90fe764
+Description: greenlet plugin for uWSGI (Python)
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides greenlet plugin for uWSGI with Python WSGI plugin.
+
+Package: uwsgi-plugin-ldap
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 95
+Depends: libc6 (>= 2.14), libldap-2.4-2 (>= 2.4.7), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-ldap_1.9.17.1-5ubuntu1_amd64.deb
+Size: 33826
+SHA256: 87f3f169dc4c8edccc96ad6d35227cd3775d9e3b405b8e90774594256243af95
+SHA1: 55b9b2dd5b4aad0dd46d76f2cc566c21b7f75a1e
+MD5sum: de57076bf2d7066bda6362f11c7c1444
+Description: LDAP plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides ldap plugin for uWSGI.
+
+Package: uwsgi-plugin-php
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 105
+Depends: libc6 (>= 2.14), uwsgi-core (= 1.9.17.1-5ubuntu1), phpapi-20121212, libphp5-embed (>= 5.5.9+dfsg-1ubuntu4.5~)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-php_1.9.17.1-5ubuntu1_amd64.deb
+Size: 36068
+SHA256: 7937059c4ab7ec90d9515f7ac5e6aaf96b9aee0fd7cf23256bd690aea3551ab8
+SHA1: cd117f98de2e0b78447f81ed75d2ade0988e4ec5
+MD5sum: c07d7f7a8829e3e41889a6a640b46baf
+Description: PHP plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides PHP plugin for uWSGI.
+
+Package: uwsgi-plugin-psgi
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 160
+Depends: libc6 (>= 2.14), libperl5.18 (>= 5.18.2), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-psgi_1.9.17.1-5ubuntu1_amd64.deb
+Size: 53766
+SHA256: 88747c5693bf5b066e542e5bcdc46bec0fa10ba09089ad1e9eaa26555233b22d
+SHA1: 717f5cbbc58fe8eb36b0b5d2082760c41ceb51ee
+MD5sum: 6680a5716cd3cecb9c5f88a8bc1f4a8a
+Description: Perl PSGI plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides Perl PSGI plugin for uWSGI.
+
+Package: uwsgi-plugin-python
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 250
+Depends: libc6 (>= 2.14), libpython2.7 (>= 2.7), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Suggests: python-uwsgidecorators
+Provides: httpd-wsgi
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-python_1.9.17.1-5ubuntu1_amd64.deb
+Size: 79650
+SHA256: ae56e5f71f9fad222c128b94b08831ee7276c4cdafffc65f085c21178f613eac
+SHA1: 74a303191acc51cc8272d47f8e5f7b537648c520
+MD5sum: 6a7c32b4060973eea83fd8f33da267f1
+Description: Python WSGI plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides Python WSGI plugin for uWSGI (linked with Python 2.X
+ runtime).
+
+Package: uwsgi-plugin-python3
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 250
+Depends: libc6 (>= 2.14), libpython3.4 (>= 3.4~b1), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Suggests: python3-uwsgidecorators
+Provides: httpd-wsgi
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-python3_1.9.17.1-5ubuntu1_amd64.deb
+Size: 80512
+SHA256: b5b213f933b25627ebbf117714f320ac4c60113cd338b2d5d6756b04064e7874
+SHA1: a9fd60740cb2951701bce5b53cb9ea0162249391
+MD5sum: 3a22ed489186daa05bff4ef5f1e78590
+Description: Python 3 WSGI plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides Python 3 WSGI plugin for uWSGI (linked with Python 3.X
+ runtime).
+
+Package: uwsgi-plugin-rack-ruby1.9.1
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 138
+Depends: libc6 (>= 2.14), libruby1.9.1 (>= 1.9.2.0), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-rack-ruby1.9.1_1.9.17.1-5ubuntu1_amd64.deb
+Size: 48932
+SHA256: 4ffc5cc78030b0dedb7ea9244f4f67de1bf767412e68c10a5e24c87b1d68185a
+SHA1: 974cbf7aa99ceb8d2e0402afb80be8a967be372f
+MD5sum: 850a2fbfdb9358b2e86a7243c17b8ac5
+Description: Rack plugin for uWSGI (Ruby 1.9.1)
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides Rack plugin for uWSGI (linked with Ruby 1.9.1 runtime).
+
+Package: uwsgi-plugin-rbthreads
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 63
+Depends: libc6 (>= 2.2.5), uwsgi-core (= 1.9.17.1-5ubuntu1), uwsgi-plugin-rack-ruby1.9.1 (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-rbthreads_1.9.17.1-5ubuntu1_amd64.deb
+Size: 18846
+SHA256: 27c39d4374e13f1388ca901ffd5bdb754e8fa9af71ba45d04abca931d4a79bd9
+SHA1: 2d3fe5a152e633eb6b835039bdf847bd00b662e4
+MD5sum: 874be6c336b048cda50500a75e097004
+Description: Ruby native threads plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides Ruby 1.9 native threads plugin for uWSGI.
+
+Package: uwsgi-plugin-router-access
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 83
+Depends: libc6 (>= 2.2.5), libwrap0 (>= 7.6-4~), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-router-access_1.9.17.1-5ubuntu1_amd64.deb
+Size: 29750
+SHA256: cb0fc83426f7d86a90bece83c15bd4a76809871aad140cb65fed483dc68e7460
+SHA1: ec0b492089b830829e8d65c148f3951d8f36a049
+MD5sum: cfc18823c85c1f13c782744e76d93ddb
+Description: Access router plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides router_access plugin for uWSGI.
+
+Package: uwsgi-plugin-sqlite3
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 87
+Depends: libc6 (>= 2.2.5), libsqlite3-0 (>= 3.5.9), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-sqlite3_1.9.17.1-5ubuntu1_amd64.deb
+Size: 29782
+SHA256: f038fbea9d20eed2ffcad81eb9244f137a209ad13f8609d0929599d4b17c0b97
+SHA1: 128b40fb75b2032fff3558c307c73e885b6a1ee9
+MD5sum: 1c1f266bd8e13eaf9a44242a29aa59dc
+Description: sqlite3 configurations plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides sqlite plugin for uWSGI, which allows loading
+ configurations from sqlite3 db.
+
+Package: uwsgi-plugin-xslt
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 91
+Depends: libc6 (>= 2.4), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25), uwsgi-core (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugin-xslt_1.9.17.1-5ubuntu1_amd64.deb
+Size: 33002
+SHA256: 08799674c1b4bb8aa24c8a996ad8247eeda1671ab5c8e59f6208d8607ec75dad
+SHA1: 3c9b41ab70b07a1d3097153a49d2d1fd505541cd
+MD5sum: 28e608e9e07dbc8b073699b5613209b2
+Description: XSLT request plugin for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This package provides xslt plugin for uWSGI.
+
+Package: uwsgi-plugins-all
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: amd64
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 40
+Depends: uwsgi-infrastructure-plugins (= 1.9.17.1-5ubuntu1), uwsgi-app-integration-plugins (= 1.9.17.1-5ubuntu1), uwsgi-plugin-rbthreads (= 1.9.17.1-5ubuntu1), uwsgi-plugin-fiber (= 1.9.17.1-5ubuntu1), uwsgi-plugin-greenlet-python (= 1.9.17.1-5ubuntu1), uwsgi-plugin-php (= 1.9.17.1-5ubuntu1), uwsgi-plugin-pyerl-python (= 1.9.17.1-5ubuntu1), uwsgi-plugin-pyerl-python3 (= 1.9.17.1-5ubuntu1)
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-plugins-all_1.9.17.1-5ubuntu1_amd64.deb
+Size: 16384
+SHA256: 2aa1425b9923a2095401d5c6dff49928d930960544fddec837bf578548d1617e
+SHA1: fa8249930ad7d78e6f01689a003e522f5cfdaae3
+MD5sum: bdb0f9959d95cc39bcee3f97d7a7fc77
+Description: all available plugins for uWSGI
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ It is designed to be fully modular. This means that different plugins can be
+ used in order to add compatibility with tons of different technology on top of
+ the same core.
+ .
+ This dependency package provides all available plugins for uWSGI:
+   * infrastructure plugins (HTTP serving, RPC, etc.)
+   * plugins for integration of uWSGI and application (PSGI, Rack, WSGI,
+     etc.)
+   * fiber loop engine, greenlet (Python), pyerl (Python/Python 3)
 

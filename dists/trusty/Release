@@ -3,28 +3,28 @@ Label: Tech Coach
 Suite: stable
 Codename: trusty
 Version: 1.0
-Date: Wed, 27 May 2015 12:44:26 UTC
+Date: Wed, 27 May 2015 12:47:49 UTC
 Architectures: amd64 i386
 Components: main
 Description: Tech Coach Debian packages
 MD5Sum:
- eb857b2cf593d777ea4ba66c06c80239 5612 main/binary-amd64/Packages
- 3e4f983b39851cc21208f5a323f54d85 2174 main/binary-amd64/Packages.gz
+ 47159e8948c59d71304774b2e39603b3 38643 main/binary-amd64/Packages
+ 96dc367364e2b70cf5822a7d9e5d8920 8315 main/binary-amd64/Packages.gz
  48d0a1d604e35c76607967b2ea7c141d 152 main/binary-amd64/Release
- f448f74af5c7ce84a3355645caf6e9ba 740 main/binary-i386/Packages
- 2f520ef802165ed3e5e2707b200649b2 483 main/binary-i386/Packages.gz
+ 1238abec4f9fbcd854ecd8fafdb809a3 3480 main/binary-i386/Packages
+ 77b760a46224add0ad822185a34dfa3d 1361 main/binary-i386/Packages.gz
  b86fd8787d0c70835a2b3e4cfbef27a4 151 main/binary-i386/Release
 SHA1:
- d2504033262c02ed5392d08be64099369613e7c4 5612 main/binary-amd64/Packages
- d573f4d5f3b0bea60a4232a8c8de02f71a908f4b 2174 main/binary-amd64/Packages.gz
+ 596cb69a066f43ae7de7eaee5f70648809f3a7f2 38643 main/binary-amd64/Packages
+ ff0d316be9e7259b355637e7638e6f5c53907e0d 8315 main/binary-amd64/Packages.gz
  2ca7939016f74b893fcc0270508169fef0f500f9 152 main/binary-amd64/Release
- d6ff5611838a03bff6fc2e0a1cb2e09830c874e9 740 main/binary-i386/Packages
- 53589eaed5519d28c95e96e191d6d830f9926f1d 483 main/binary-i386/Packages.gz
+ 80c3bd8ff0706092b99c414cb0ab85126883ed7d 3480 main/binary-i386/Packages
+ 17d298a1443c9a6e320b3e6aa22a94d74e73231d 1361 main/binary-i386/Packages.gz
  86db8fc68e97fe090b7ecb3d15a4b67981f9dd0e 151 main/binary-i386/Release
 SHA256:
- cf313d7db66255ed44384175aec1f0408aa0bc3b5a7a745a7420eccc685c3a06 5612 main/binary-amd64/Packages
- 1b19cbad129d00a21f5c4f2f29d072f5b9ffb20f134073682d5a8d49c307b97e 2174 main/binary-amd64/Packages.gz
+ 01da9f4f5d082f0e2aded8cfddafb642a753e6e0ed0c8aeb39b5308fc7cd6eef 38643 main/binary-amd64/Packages
+ bbc042c8fa909e7ed713a36a87967599bb956957a61ecaa31eefef7085d59dd7 8315 main/binary-amd64/Packages.gz
  e66f780d21c88dee1d3ec32bde4c1872f3c4ca92902a3ffc77064b3c6f372314 152 main/binary-amd64/Release
- 9f65e5e7b14b9fe9e6d03f6586ce6877b949d4655f434d01763f5048818539b7 740 main/binary-i386/Packages
- bbe7fd4bed28d0b9a197d6ce8b6e301ed5ceec78dda29e46df693eecee6fe403 483 main/binary-i386/Packages.gz
+ 81fe16893f5db3f13c03bdaceab26e35a6dd5f71e046de2248eb4a36ba829547 3480 main/binary-i386/Packages
+ efa90909ce70b4a04df97aaafdbda8c33dc3373a13747c1e75417bbb648d47a3 1361 main/binary-i386/Packages.gz
  cba8722c020d42b484c4da239c075e2bcb493428db112e078b0391f89c685612 151 main/binary-i386/Release

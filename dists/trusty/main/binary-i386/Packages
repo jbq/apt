@@ -18,3 +18,72 @@ Description: module to read/write OpenXML xlsx/xlsm files
  Openpyxl is a pure Python module to read/write Excel 2007 (OpenXML)
  xlsx/xlsm files.
 
+Package: python-uwsgidecorators
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: all
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 62
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), uwsgi-core, uwsgi-plugin-python
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: python
+Filename: pool/main/u/uwsgi/python-uwsgidecorators_1.9.17.1-5ubuntu1_all.deb
+Size: 18448
+SHA256: 5fa76e950c7a4c02829abdf57b143aa3a4102cf14f6d5c64ad7761d52184f3c9
+SHA1: 32762359d4309b0b9da8bf25e765e4d84071fdda
+MD5sum: bbe2f42c905d1485ebf0a744e28fd88b
+Description: module of decorators for elegant access to uWSGI API (Python)
+ uwsgidecorators is a simple Python module that exports a bunch of decorators
+ to allow a more elegant approach to uWSGI API. Provided decorators helps with
+ creating of RPC functions, timers, filemonitors.
+ .
+ This package provides uwsgidecorators module, accessible from Python 2.X
+ runtime.
+
+Package: python3-uwsgidecorators
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: all
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 62
+Depends: python3:any (>= 3.3.2-2~), uwsgi-core, uwsgi-plugin-python3
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: python
+Filename: pool/main/u/uwsgi/python3-uwsgidecorators_1.9.17.1-5ubuntu1_all.deb
+Size: 18584
+SHA256: ba905ac2bf9415b0a569be9d954b82d1977c882dd1d1aa8f8bc1478a8841c6fc
+SHA1: 81adfdfa1cac3522efbc1e849448548633d92841
+MD5sum: 4e6aa3a4b42cef15cb51a5c9024ebf35
+Description: module of decorators for elegant access to uWSGI API (Python 3)
+ uwsgidecorators is a simple Python module that exports a bunch of decorators
+ to allow a more elegant approach to uWSGI API. Provided decorators helps with
+ creating of RPC functions, timers, filemonitors.
+ .
+ This package provides uwsgidecorators module, accessible from Python 3.X
+ runtime.
+ .
+ uwsgidecorators module doesn't targeted at Python 3 officially, so some
+ decorators may not work or work improperly.
+
+Package: uwsgi-extra
+Source: uwsgi
+Version: 1.9.17.1-5ubuntu1
+Architecture: all
+Maintainer: Janos Guljas <janos@debian.org>
+Installed-Size: 119
+Homepage: http://projects.unbit.it/uwsgi/
+Priority: extra
+Section: web
+Filename: pool/main/u/uwsgi/uwsgi-extra_1.9.17.1-5ubuntu1_all.deb
+Size: 35716
+SHA256: ed9e80be034c37a7c8413a4086221985208f65741750c9ad85d36acb90a7f127
+SHA1: fe76970a8f8715e4970460e7f9b25e4b400491d1
+MD5sum: 6d6012a16f5de81e76c62e494a8503f1
+Description: fast, self-healing application container server (extra files)
+ uWSGI presents a complete stack for networked/clustered web applications,
+ implementing message/object passing, caching, RPC and process management.
+ .
+ This package provides extra files from uWSGI distribution.
+
