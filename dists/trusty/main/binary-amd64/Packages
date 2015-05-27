@@ -1,3 +1,18 @@
+Package: ibm-iaccess
+Homepage: http://www-03.ibm.com/systems/power/software/i/access/solutions.html
+Maintainer: IBM <___@ibm.com>
+Architecture: amd64
+Depends: unixodbc
+Version: 1.1.0.2-1.0
+Priority: optional
+Section: non-free/database
+Filename: pool/main/i/ibm-iaccess/ibm-iaccess_1.1.0.2-1.0_amd64.deb
+Size: 6157152
+SHA256: a6aaf8a4ebdc1ba2ea2f42a4885c1ee4977594e85381965c2c729f4affa31e89
+SHA1: 617cdcb2b1c0f579295af83aae6b8aaf5df70702
+MD5sum: dfcbf1f8fd623ed96267f126fa2e2295
+Description: IBM i Access Client Solutions
+
 Package: libodbc1
 Source: unixodbc
 Version: 2.3.1-3
